@@ -12,7 +12,6 @@
 		8C4583C41C05761100C57986 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C4583C31C05761100C57986 /* ViewController.m */; };
 		8C4583C71C05761100C57986 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C4583C51C05761100C57986 /* Main.storyboard */; };
 		8C4583C91C05761100C57986 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8C4583C81C05761100C57986 /* Assets.xcassets */; };
-		8C4583CC1C05761100C57986 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C4583CA1C05761100C57986 /* LaunchScreen.storyboard */; };
 		8C4583D71C05761200C57986 /* PalmScanTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C4583D61C05761200C57986 /* PalmScanTests.m */; };
 		8C4583E21C05761200C57986 /* PalmScanUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C4583E11C05761200C57986 /* PalmScanUITests.m */; };
 /* End PBXBuildFile section */
@@ -43,7 +42,6 @@
 		8C4583C31C05761100C57986 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		8C4583C61C05761100C57986 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8C4583C81C05761100C57986 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		8C4583CB1C05761100C57986 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8C4583CD1C05761100C57986 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8C4583D21C05761200C57986 /* PalmScanTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PalmScanTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C4583D61C05761200C57986 /* PalmScanTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PalmScanTests.m; sourceTree = "<group>"; };
@@ -107,7 +105,6 @@
 				8C4583C31C05761100C57986 /* ViewController.m */,
 				8C4583C51C05761100C57986 /* Main.storyboard */,
 				8C4583C81C05761100C57986 /* Assets.xcassets */,
-				8C4583CA1C05761100C57986 /* LaunchScreen.storyboard */,
 				8C4583CD1C05761100C57986 /* Info.plist */,
 				8C4583BC1C05761100C57986 /* Supporting Files */,
 			);
@@ -207,6 +204,7 @@
 				TargetAttributes = {
 					8C4583B81C05761100C57986 = {
 						CreatedOnToolsVersion = 7.1.1;
+						DevelopmentTeam = 275X96KVEB;
 					};
 					8C4583D11C05761200C57986 = {
 						CreatedOnToolsVersion = 7.1.1;
@@ -243,7 +241,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8C4583CC1C05761100C57986 /* LaunchScreen.storyboard in Resources */,
 				8C4583C91C05761100C57986 /* Assets.xcassets in Resources */,
 				8C4583C71C05761100C57986 /* Main.storyboard in Resources */,
 			);
@@ -316,14 +313,6 @@
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		8C4583CA1C05761100C57986 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				8C4583CB1C05761100C57986 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
@@ -363,7 +352,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -401,7 +390,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 2;
@@ -413,10 +402,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = PalmScan/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cn.com.ifore.PalmScan;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Debug;
 		};
@@ -424,10 +417,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = PalmScan/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cn.com.ifore.PalmScan;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Release;
 		};
